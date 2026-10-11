@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>.</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#f3ede2;
+  color:#202b3c;
+  font-family:Inter,Arial,sans-serif;
+}
+
+header{
+  text-align:center;
+  padding:75px 20px;
+  color:white;
+  background:linear-gradient(135deg,#07192b,#29455a,#07192b);
+  border-bottom:4px solid #cba45c;
+}
+
+header h1{
+  font-family:Cinzel,Georgia,serif;
+  font-size:clamp(2.2rem,7vw,5rem);
+  margin:0 0 15px;
+}
+
+header p{color:#eadfc9;font-size:1.1rem}
+header span{
+  display:inline-block;
+  margin-top:15px;
+  color:#e9c783;
+  letter-spacing:3px;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:13px;
+  background:#102438;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+nav a{
+  color:#f4e7cd;
+  text-decoration:none;
+  padding:9px 12px;
+  border:1px solid #ffffff35;
+  border-radius:20px;
+  font-size:.82rem;
+}
+
+nav a:hover{background:#cba45c;color:#102438}
+
+main{width:min(1200px,94%);margin:30px auto}
+
+.intro{
+  background:#fffaf1;
+  border:1px solid #e1d2b7;
+  border-radius:16px;
+  padding:25px;
+  line-height:1.8;
+  margin-bottom:35px;
+  box-shadow:0 8px 25px #18243a0c;
+}
+
+.intro h2{font-family:Cinzel,Georgia,serif;margin-top:0}
+
+.section{
+  margin:35px 0;
+  padding:20px;
+  border-radius:18px;
+  border:1px solid var(--accent);
+  background:var(--background);
+  scroll-margin-top:80px;
+}
+
+.section-title{
+  color:var(--accent);
+  font-family:Cinzel,Georgia,serif;
+  font-size:clamp(1.4rem,4vw,2rem);
+  margin:0 0 8px;
+}
+
+.section-description{color:#536074;line-height:1.7;margin-bottom:20px}
+
+.people{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:15px;
+}
+
+.person{
+  background:#fffdf8;
+  border:1px solid #e5ddcf;
+  border-radius:13px;
+  overflow:hidden;
+  text-align:center;
+  padding-bottom:15px;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.person:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 25px #00000015;
+}
+
+.portrait{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  object-position:top center;
+  background:#e5dac8;
+  display:block;
+}
+
+.photo-placeholder{
+  height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  background:linear-gradient(145deg,#e8dcc6,#d3c2a4);
+  color:#65543c;
+  font:2.4rem Georgia,serif;
+}
+
+.photo-placeholder small{
+  font:600 .7rem Inter,Arial,sans-serif;
+  letter-spacing:1px;
+}
+
+.person h3{
+  font-family:Georgia,serif;
+  font-size:1.05rem;
+  padding:0 8px;
+  margin:13px 0 5px;
+}
+
+.years{color:var(--accent);font-weight:700;font-size:.85rem}
+
+.person p{
+  color:#505b6c;
+  font-size:.88rem;
+  line-height:1.6;
+  padding:0 12px;
+  margin:10px 0 0;
+}
+
+.science{--accent:#287ca5;--background:#e7f3f8}
+.technology{--accent:#7653a2;--background:#f0eafa}
+.engineering{--accent:#ad6926;--background:#fff0df}
+.humanities{--accent:#ae405e;--background:#fbeaf0}
+.mathematics{--accent:#24775f;--background:#e6f3ec}
+
+footer{
+  background:#091b2d;
+  color:#e4d5b8;
+  text-align:center;
+  padding:25px;
+  font-size:.85rem;
+  line-height:1.8;
+}
+
+@media(max-width:850px){
+  .people{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portrait,.photo-placeholder{height:220px}
+}
+
+@media(max-width:420px){
+  header{padding:50px 12px}
+  header p{font-size:.95rem}
+  nav{gap:6px;padding:9px 4px}
+  nav a{font-size:.7rem;padding:8px}
+  main{width:94%}
+  .section{padding:12px}
+  .people{gap:9px}
+  .portrait,.photo-placeholder{height:165px}
+  .person h3{font-size:.92rem}
+  .person p{font-size:.79rem;padding:0 8px}
+  .intro{padding:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Iluminismul european</h1>
+  <span>SECOLELE XVII–XVIII</span>
+</header>
+
+
+<main>
+
+<section class="intro">
+  <h2>Ce a fost Iluminismul?</h2>
+  <p>
+    Iluminismul a fost o mișcare intelectuală și culturală europeană
+    care a pus accent pe rațiune, educație, observație și libertatea
+    gândirii. În secolele XVII–XVIII, oamenii de știință, inventatorii,
+    filosofii și matematicienii au contribuit la dezvoltarea lumii moderne.
+  </p>
+  <p>
+    Ideile iluministe au încurajat cercetarea, răspândirea cunoștințelor
+    și folosirea rațiunii pentru a înțelege natura și societatea.
+  </p>
+</section>
+
+<div id="continut"></div>
+
+</main>
+
+
+<script>
+const categorii = [
+{
+ id:"stiinte",clasa:"science",titlu:"Științe",
+ descriere:"Descoperiri despre natură, univers, corpul uman și materie.",
+ persoane:[
+  ["Isaac Newton","1643–1727","A formulat legile mișcării și legea gravitației universale.","GodfreyKneller-IsaacNewton-1689.jpg"],
+  ["Antoine Lavoisier","1743–1794","A contribuit la întemeierea chimiei moderne și la principiul conservării masei.","Antoine_lavoisier.jpg"],
+  ["Carl Linnaeus","1707–1778","A dezvoltat clasificarea organismelor și denumirea științifică a speciilor.","Carl_von_Linne.jpg"],
+  ["William Harvey","1578–1657","A demonstrat circulația sângelui în corpul uman.","William_Harvey.jpg"]
+ ]
+},
+{
+ id:"tehnologie",clasa:"technology",titlu:"Tehnologie",
+ descriere:"Instrumente și invenții care au făcut munca și măsurarea mai precise.",
+ persoane:[
+  ["Blaise Pascal","1623–1662","A construit Pascalina, un calculator mecanic.","Blaise_Pascal_Versailles.JPG"],
+  ["Denis Diderot","1713–1784","A coordonat publicarea Enciclopediei, care a răspândit cunoștințe.","Denis_Diderot_by_Louis-Michel_van_Loo.jpg"],
+  ["Daniel Fahrenheit","1686–1736","A perfecționat termometrul și a introdus scara Fahrenheit.","Fahrenheit_small.jpg"],
+  ["Anders Celsius","1701–1744","A propus o scară centigradă pentru măsurarea temperaturii.","Anders_Celsius.jpg"]
+ ]
+},
+{
+ id:"inginerie",clasa:"engineering",titlu:"Inginerie",
+ descriere:"Mașini și soluții tehnice care au contribuit la dezvoltarea industriei.",
+ persoane:[
+  ["James Watt","1736–1819","A îmbunătățit mașina cu abur și eficiența acesteia.","James_Watt_by_Henry_Howard.jpg"],
+  ["Thomas Newcomen","1664–1729","A dezvoltat un motor cu abur pentru pomparea apei din mine.","Thomas_Newcomen.jpg"],
+  ["John Harrison","1693–1776","A realizat cronometre marine pentru navigația pe oceane.","John_Harrison.jpg"],
+  ["Benjamin Franklin","1706–1790","A cercetat electricitatea și a promovat folosirea paratrăsnetului.","Benjamin_Franklin_by_Joseph_Duplessis.jpg"]
+ ]
+},
+{
+ id:"umanism",clasa:"humanities",titlu:"Artă și umanism",
+ descriere:"Filosofi, scriitori și artiști care au promovat libertatea, educația și răspândirea ideilor.",
+ persoane:[
+  ["Voltaire","1694–1778","A susținut toleranța și libertatea de exprimare.","Voltaire.jpg"],
+  ["Jean-Jacques Rousseau","1712–1778","A scris despre educație, libertate și organizarea societății.","Jean-Jacques_Rousseau_(painted_portrait).jpg"],
+  ["Jean le Rond d’Alembert","1717–1783","Filosof și matematician, coeditor al Enciclopediei.","Jean_le_Rond_d'Alembert.jpg"],
+  ["Charles-Nicolas Cochin","1715–1790","Gravor și desenator francez, cunoscut pentru ilustrațiile sale.","Charles-Nicolas_Cochin.jpg"]
+ ]
+},
+{
+ id:"matematica",clasa:"mathematics",titlu:"Matematică",
+ descriere:"Gânditori care au dezvoltat analiza matematică, teoria numerelor și metodele de calcul.",
+ persoane:[
+  ["Leonhard Euler","1707–1783","A contribuit la analiză, teoria numerelor și notația matematică.","Leonhard_Euler_2.jpg"],
+  ["Pierre de Fermat","1607–1665","A contribuit la teoria numerelor, geometrie și probabilități.","Pierre_de_Fermat.jpg"],
+  ["Gottfried Wilhelm Leibniz","1646–1716","A dezvoltat calculul diferențial și integral.","Gottfried_Wilhelm_von_Leibniz.jpg"],
+  ["Isaac Newton","1643–1727","A aplicat matematica pentru a descrie mișcarea corpurilor.","GodfreyKneller-IsaacNewton-1689.jpg"]
+ ]
+}
+];
+
+const container=document.getElementById("continut");
+
+function adresaImagine(fisier){
+ return "https://commons.wikimedia.org/wiki/Special:FilePath/"
+        + encodeURIComponent(fisier);
+}
+
+function creeazaPlaceholder(nume){
+ const el=document.createElement("div");
+ el.className="photo-placeholder";
+
+ const initiale=document.createElement("span");
+ initiale.textContent=nume.split(/\s+/)
+   .map(c=>c[0]).slice(0,2).join("");
+
+ const eticheta=document.createElement("small");
+ eticheta.textContent="PORTRET ISTORIC";
+
+ el.append(initiale,eticheta);
+ return el;
+}
+
+function cautaPortret(img,nume){
+ const api="https://commons.wikimedia.org/w/api.php"
+  +"?action=query&generator=search"
+  +"&gsrsearch="+encodeURIComponent(
+    'filetype:bitmap "'+nume+'" portrait'
+   )
+  +"&gsrnamespace=6&gsrlimit=10"
+  +"&prop=imageinfo&iiprop=url"
+  +"&iiurlwidth=500&format=json&origin=*";
+
+ fetch(api)
+  .then(r=>{
+   if(!r.ok)throw new Error("Eroare la căutare");
+   return r.json();
+  })
+  .then(data=>{
+   const pagini=Object.values(data.query?.pages||{});
+
+   // Preferă fișierele care menționează numele persoanei.
+   const numeSimplificat=nume.toLowerCase().replace(/[’']/g,"");
+
+   const potrivire=pagini.find(p=>{
+    const titlu=(p.title||"").toLowerCase().replace(/[’']/g,"");
+    return titlu.includes(numeSimplificat)
+       && p.imageinfo?.[0]?.thumburl;
+   });
+
+   const rezultat=potrivire||pagini.find(
+    p=>p.imageinfo?.[0]?.thumburl
+   );
+
+   if(rezultat){
+    img.src=rezultat.imageinfo[0].thumburl;
+   }else{
+    img.replaceWith(creeazaPlaceholder(nume));
+   }
+  })
+  .catch(()=>{
+   if(img.isConnected)img.replaceWith(creeazaPlaceholder(nume));
+  });
+}
+
+categorii.forEach(categorie=>{
+ const section=document.createElement("section");
+ section.id=categorie.id;
+ section.className="section "+categorie.clasa;
+
+ const heading=document.createElement("h2");
+ heading.className="section-title";
+ heading.textContent=categorie.titlu;
+
+ const descriere=document.createElement("p");
+ descriere.className="section-description";
+ descriere.textContent=categorie.descriere;
+
+ const people=document.createElement("div");
+ people.className="people";
+
+ section.append(heading,descriere,people);
+
+ categorie.persoane.forEach(([nume,ani,descriere,fisier])=>{
+  const article=document.createElement("article");
+  article.className="person";
+
+  const img=document.createElement("img");
+  img.className="portrait";
+  img.alt="Portret: "+nume;
+  img.loading="lazy";
+  img.decoding="async";
+
+  let incercare=0;
+
+  img.onerror=function(){
+   if(incercare===0){
+    incercare++;
+    cautaPortret(img,nume);
+   }else{
+    img.replaceWith(creeazaPlaceholder(nume));
+   }
+  };
+
+  // Pentru Daniel Fahrenheit încercăm explicit fișierul
+  // Fahrenheit_small.jpg, înaintea căutării automate.
+  img.src=adresaImagine(
+   nume==="Daniel Fahrenheit" ? "Fahrenheit_small.jpg" : fisier
+  );
+
+  const h3=document.createElement("h3");
+  h3.textContent=nume;
+
+  const aniEl=document.createElement("div");
+  aniEl.className="years";
+  aniEl.textContent=ani;
+
+  const p=document.createElement("p");
+  p.textContent=descriere;
+
+  article.append(img,h3,aniEl,p);
+  people.appendChild(article);
+ });
+
+ container.appendChild(section);
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
